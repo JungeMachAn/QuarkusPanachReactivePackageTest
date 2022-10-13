@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  users_private_backend_db:
+    image: postgres:13-alpine
+    container_name: demo_db
+    restart: always
+    environment:
+      POSTGRES_USER: demo_user
+      POSTGRES_PASSWORD: demo_pwd
+    ports:
+      - 5432:5432
